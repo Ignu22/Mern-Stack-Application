@@ -19,7 +19,7 @@ app.use((req,res,next) => {
 app.use('/api/workouts',workoutRoutes)
 
 //connect to db
-mongoose.connect(process.env.uri)
+mongoose.connect(process.env.URL)
   .then(()=>{
         //listen for requests
         app.listen(process.env.PORT, () =>{
